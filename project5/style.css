@@ -1,0 +1,21 @@
+body {
+    background-color: lightblue;
+	margin:0;
+	padding:0;
+	border:0;
+}
+#Maincontainer{opacity:0;overflow:hidden;border:1px solid black; background-color:white;position:absolute;width:300px;height:250px;top:0px;left:0px;}
+.imgs{position:absolute;width:auto;height:100%;opacity:0;}
+#bg{}
+#bgTxt1{}
+#bgTxt2{}
+#bg1{}
+#man{}
+#headL{}
+#TT{}
+#BT{}
+#headR{}
+#wave{}
+#TT_1{}
+#ship{transform-origin:center center !important;}
+#shipP{}

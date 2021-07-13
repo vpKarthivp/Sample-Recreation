@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=970,height=250">
+<script type="text/javascript">var clickTag = "http://www.google.com"; </script>
+</head>
+
+<body>
+<div id="maincontainer">
+<a href="javascript:window.open(window.clickTag)">
+<img id="img1" class="imgs" src="CHENNAI.png">
+<img id="img2" class="imgs" src="BANG.png">
+<img id="img3" class="imgs" src="KOVAI.png">
+<img id="img4" class="imgs" src="MUMBAI.png">
+<img id="img5" class="imgs" src="HYDRABAD.png">
+<img id="img6" class="imgs" src="KASHMIR.png">
+<img id="img7" class="imgs" src="KERALA.png">
+<img id="img8" class="imgs" src="TRICHY.png">
+<div id="line"></div>
+<div id="from" class="fromto text">FROM</div>
+<div id="to" class="fromto text">TO</div>
+<p>CHENNAI</p>
+<p>BANGALORE</p>
+<p>COIMBATORE</p>
+<p>MUMBAI</p>
+<p>HYDRABAD</p>
+<p>KASHMIR</p>
+<p>KERALA</p>
+<p>TRICHY</p> 
+<div id="lastFrame">
+<div id="text" class="text">see global cultures</br>through local eyes</div>
+<div id="CTA">View Images</div>
+</div>
+</a>
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+<script>
+
+
+var tl = new TimelineMax({onStart:text});
+tl.staggerTo(".imgs", 1, {opacity:1},1)
+tl.to("#line", 0.5, {x:-30},"-=8")
+
+function text(){
+var text = new TimelineMax({onStart:textHide}); <!-- {onStart:textHide} -->
+text.staggerTo("p", 1, {transform:"scale(1) rotateX(0deg)",opacity:1},1)
+text.to("#lastFrame", 1, {opacity:1},"+=1")
+text.to("#text", 1, {opacity:1,y:44},"-=0.5")
+text.to("#CTA", 1, {opacity:1,y:-44},"-=1")
+}
+
+function textHide(){
+var textHide = new TimelineMax({onStart:fromtxtHide,delay:1});
+textHide.staggerTo("p", 1, {transform:"scale(0) rotateX(90deg)","transform-origin":"bottom center",opacity:0},1)
+textHide.to("#to", 0.5, {opacity:0},"-=1")
+}
+
+function fromtxtHide(){
+var fromtxtHide = new TimelineMax();
+fromtxtHide.to("#from", 0.5, {opacity:0})
+fromtxtHide.to("#to", 0.5, {opacity:1},"-=0.5")
+}
+
+
+</script> 
+
+</html>

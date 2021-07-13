@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Raleway" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">  
+
+</head>
+<body>
+
+<div id="Maincontainer">
+<img class="imgs" id="bg" src="bg.png">
+<img class="imgs" id="bgTxt1" src="bgTxt1.png">
+<img class="imgs" id="bgTxt2" src="bgTxt2.png">
+<img class="imgs" id="bg1" src="bg1.png">
+<img class="bg1S imgs" id="man" src="man.png">
+<img class="bg1S imgs" id="headL" src="headL.png">
+<img class="imgs" id="TT" src="TT.png">
+<img class="imgs" id="BT" src="BT.png">
+<img class="imgs" id="headR" src="headR.png">
+<img class="imgs" id="car" src="car.png">
+<img class="imgs" id="bg2" src="bg1.png">
+<img class="imgs" id="BT" src="BT.png">
+<div id="shipP" class="imgs"><img class="imgs" id="ship" src="ship.png"></div>
+<img class="imgs" id="wave" src="wave.png">
+<img class="imgs" id="TT_1" src="TT_1.png">
+<img class="imgs" id="bg3" src="bg.png">
+<img class="imgs" id="LbgTxt1" src="LbgTxt1.png">
+<img class="imgs" id="LbgTxt2" src="LbgTxt2.png">
+
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+var tl = new TimelineMax({repeat:2,repeatDelay:0.2});
+tl.to("#bgTxt1", 0, {x:300});
+tl.to("#bgTxt2", 0, {x:-300});
+tl.to("#LbgTxt1", 0, {x:300});
+tl.to("#LbgTxt2", 0, {x:-300});
+tl.to("#car", 0, {x:160,y:17});
+tl.to("#shipP", 0, {opacity:1,x:-212,y:0});
+tl.to("#ship", 0, {opacity:1});
+tl.to("#TT", 0.5, {opacity:1,y:-50},"-=0.5");
+tl.to("#Maincontainer", 0.2, { opacity: 1});
+tl.to("#bg", 0, {opacity:1});
+tl.to("#bgTxt1", 1, {opacity:1,x:0},"-=0.1");
+tl.to("#bgTxt2", 1, {opacity:1,x:0},"-=1.1");
+tl.to("#bgTxt1", 1, {opacity:1,x:-300},"+=0.5");
+tl.to("#bgTxt2", 1, {opacity:1,x:300},"-=1");
+tl.to(".bg1", 0, {opacity:1},"-=0.5");
+tl.to(".bg1S", 0, {opacity:1},"-=0.5");
+
+tl.to("#BT", 1, {opacity:1});
+tl.to("#TT", 1, {opacity:1,y:0},"-=1");
+tl.to("#car", 1, {opacity:1,x:40,y:17});
+tl.to("#headR", 0, {opacity:1});
+tl.to("#bg2", 0.5, {opacity:1},"+=1");
+tl.to("#wave", 0.5, {opacity:1},"-=0.8");
+tl.to("#wave", 4, {x:-150},"-=0.8");
+tl.to("#TT_1", 1, {opacity:1},"-=3.8");
+tl.to("#shipP", 4, {opacity:1,x:80,y:0,onStart:shoipM},"-=3.8");
+
+tl.to("#bg3", 0, {opacity:1},"-=1");
+tl.to("#LbgTxt1", 1, {opacity:1,x:0},"-=1.1");
+tl.to("#LbgTxt2", 1, {opacity:1,x:0},"-=1.1");
+
+
+function shoipM(){
+var shoipM = new TimelineMax({yoyo:false,repeat:2});
+shoipM.to("#ship", 2, {transform:"rotateZ(-12deg)",ease: Power1.easeIn});
+shoipM.to("#ship", 2, {transform:"rotateZ(0deg)",ease: Power1.easeIn});
+}
+
+</script>
+</html>

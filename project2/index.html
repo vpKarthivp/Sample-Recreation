@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div id="maincontainer">
+
+
+<img id="img3" class="imgs" src="img3.png">
+<img id="img2" class="imgs" src="img2.png">
+<img id="img1" class="imgs" src="img1.png">
+<img id="whitimg" class="imgs" src="whitimg.png">
+<div id="blue"></div>
+<div id="text1" class="texts">Dentsu Aegis Network</div>
+<div id="text2" class="texts">Good Innovation</div>
+<div id="text3" class="texts">A multinational media and digital marketing communications</div>
+<div id="imgpar"><img id="logo" class="imgs logo" src="logo.png" style=""></div>
+<img id="Plogo" class="imgs logo" src="Plogo.png">
+<div id="cs" class="cs">Ctreative Snowdon</div>
+<div id="cta" class="cta">see more</div>
+
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+<script>
+var tl = new TimelineMax({repeat:0});
+tl.to("#blue", 1, { clip: "rect(0px,300px,600px,0px)"})
+tl.to("#blue", 1, { clip: "rect(288px,300px,496px,0px)"})
+tl.to("#whitimg", 1, { opacity:0},"-=0.5")
+tl.staggerTo(".texts", 1, {ease: Elastic. easeOut.config( 1, 2),x:-300},1)
+tl.to("#Plogo", 1, { ease: Elastic. easeOut.config( 1, 2),y:132})
+tl.to("#cs", 1, { ease: Elastic. easeOut.config( 1, 0.7),x:-300},"-=1")
+tl.to("#logo", 1, { opacity:1})
+tl.to("#cta", 1, { ease: Elastic. easeOut.config( 1, 0.7),y:-40})
+tl.to("#img1", 1, { opacity:0},"+=1")
+tl.to("#img2", 1, { opacity:0},"+=1")
+
+</script>
+</html>

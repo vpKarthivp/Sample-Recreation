@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="mainparant">
+<div id="bg" class="imgPs"><img id="bgc" class="imgCs" src="bg.png"></div>
+<div id="overlay" class="imgPs"></div>
+<div id="yellowImg" class="imgPs"><img id="yellowImg" class="imgCs" src="yellowImg.png"></div>
+<div id="txtP1" class="txtPs"><div id="txtC1" class="txtCs">INTRODUCING</div></div>
+<div id="txtP2" class="animclass txtPs"><div id="txtC2" class="txtCs">LUXURY</div></div>
+<div id="txtP3" class="animclass txtPs"><div id="txtC3" class="txtCs">TRAVELLING</div></div>
+<div id="txtP4" class="txtPs"><div id="txtC4" class="txtCs">PREMIUM TAXI SERVICES</div></div>
+<div id="txtP5" class="txtPs"><div id="txtC5" class="txtCs">Network of biggest taxi services</br>operating throughout the world</br>at affordable prices.</div></div>
+<div id="txtP6" class="txtP6"><div id="txtC6" class="txtCs">+123-4567-8900</div></div>
+<div id="txtP7" class="txtP6"><div id="txtC7" class="txtCs">www.yourbusinessurl.com</div></div>
+<div id="CTA" class="CTA"><div id="CTAc" class="CTAc">BOOK NOW ></div></div>
+<div id="logo" class="logo"><img id="logo1" class="imgCs" src="logo.png"></div>
+<div id="icon1" class="icon1"><img id="icon1C" class="imgCs" src="icon1.png"></div>
+<div id="icon2" class="icon1"><img id="icon2C" class="imgCs" src="icon2.png"></div>
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+var tl = new TimelineMax({yoyo:false,repeat:2});
+tl.to(".txtPs", 0, { opacity: 0});
+tl.to(".CTA", 0, { opacity: 0});
+tl.to(".icon1", 0, { opacity: 0});
+tl.to("#txtP6", 0, { opacity: 0});
+tl.to("#txtP7", 0, { opacity: 0});
+tl.to("#txtP1", 0, { opacity: 0,transform: "translate(90px,0px)"});
+tl.to("#txtP4", 0, { opacity: 0,transform: "translate(-90px,0px)"});
+tl.to("#txtP5", 0, { opacity: 0,transform: "translate(0px,50px)"});
+tl.to("#bg", 0, { opacity: 0,    transform: "scale(1.5,1) translate(0px,0px)","transform-origin": "left center"});
+tl.to("#overlay", 0, { opacity: 0,transform: "scale(1.1) translate(200px,-505px) rotate(-156deg)"});
+tl.to("#yellowImg", 0, { opacity: 0,transform: "translate(-110px,135px)"});
+tl.to("#logo", 0, { opacity: 0});
+tl.to(".animclass", 0, { opacity: 0,"transform-origin": "center center",transform: "rotateY(90deg)"});
+tl.to("#logo", 0, { opacity: 0,transform: "translate(0px,90px)"});
+tl.to("#CTA", 0, { opacity: 0,transform: "scale(0.5)"});
+tl.to(".icon1", 0, { opacity: 0,transform: "translate:(-40px,0px)"});
+tl.to(".txtP6", 0, { opacity: 0,transform: "translate:(40px,0px)"});
+//tl.to("#img2", 0, { transform: "translate(0px,-200px)"});
+tl.to("#mainparant", 0.2, { opacity: 1});
+tl.to("#yellowImg", 1, { opacity: 1,transform: "translate(0px,0px)"});
+tl.to("#overlay", 1, { opacity: 1,transform: "scale(1) translate(0px,0px) rotate(-156deg)"},"-=0.5");
+tl.to("#bg", 1, { opacity: 1,transform: "scale(1,1) translate(0px,0px)","transform-origin": "left center"},"-=0.7");
+tl.to("#txtP1", 1, { opacity: 1,transform: "translate(0px,0px)"});
+tl.to(".animclass", 1, { opacity: 1,"transform-origin": "center center",transform: "rotateY(0deg)"},"-=0.8");
+tl.to("#txtP4", 1, { opacity: 1,transform: "translate(0px,0px)"});
+tl.to("#logo", 1, { opacity: 1,transform: "translate(0px,0px)"},"-=0.8");
+tl.to("#txtP5", 1, { opacity: 1,transform: "translate(0px,0px)"},"-=0.5");
+tl.to("#CTA", 1, { opacity: 1,transform: "scale(1)", ease: Elastic.easeOut.config(1, 0.5)});
+tl.to("#icon1", 0.5, { opacity: 1,transform: "translate:(0px,0px)"});
+tl.to("#txtP6", 0.5, { opacity: 1,transform: "translate:(0px,0px)"},"-=0.2");
+tl.to("#icon2", 0.5, { opacity: 1,transform: "translate:(0px,0px)"});
+tl.to("#txtP7", 0.5, { opacity: 1,transform: "translate:(0px,0px)"},"-=0.2");
+</script>
+
+</html>

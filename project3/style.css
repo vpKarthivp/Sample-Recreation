@@ -1,0 +1,32 @@
+body {
+    background-color: lightblue;
+	font-family: 'Roboto', sans-serif;
+}
+#mainparant{opacity:0;position:absolute;top:0px;left:0px;width:300px;height:600px;border:1px solid black;overflow: hidden;}
+.txtPs{position:absolute;/*! top:0px; *//*! left:0px; */width:240px;height:40px;}
+.txtCs{position:absolute;left:0px;right:0px;margin:0 auto;font-size:20px;line-height:1;text-align:center;color: black;}
+.CTA{position:absolute;width:158px;height:34px;top:268px;left:20px;background-color:white;border-radius:10px;}
+.CTAc{position:absolute;left:0px;right:0px;margin:0 auto;font-size:20px;line-height:1;text-align:center;top: 7px;}
+.imgPs{position:absolute;top:0px;left:0px;width:300px;height:600px;}
+.imgCs{width:100%;height:auto;position:absolute}
+#txtP1{width:132px;height:18px;right:40px;top: 38px;}
+#txtP2{top:59px;height:40px;left: 0;right: 0;margin: 0 auto;}
+#txtP3{height:30px;top:110px;left: 0;right: 0;margin: 0 auto;}
+#txtP4{height:18px;font-size:20px;left:20px;top:150px;text-align:left;}
+#txtP5{height:50px;font-size:16px;top:188px;left:20px;}
+#txtP6{width:180px;height:18px;bottom:60px;position: absolute;left: 11px;}
+#txtP7{width:180px;height:18px;bottom:24px;position: absolute;left: 45px;}
+#yellowImg{}
+#bg{}
+#logo{position:absolute;width:90px;height:24px;bottom:94px;left:20px}
+#icon1{width:16px;height:20px;bottom:60px;left:20px;position: absolute;}
+#logo1{}
+#icon2{width:16px;height:20px;bottom:20px;left:20px;position: absolute;}
+#overlay{transform:rotate(-156deg);position:absolute;top:-68px;left:-39px;width:300px;height:600px;background-color:rgba(31, 31, 35, 0.8);transform: scale(0.97) rotate(-156deg);}
+#txtC5 { text-align: left;color: white;font-size: 14.5px;line-height: 1.2;}
+#txtC4 {text-align: left;  color: white;}
+#txtC2 {font-size: 57px;color: #f3b300;font-weight: bold;}
+#txtC3 { font-size: 34px; color: #f3b300;  font-weight: bold;}
+#txtC1 { color: #f3b300;}
+#txtC6 { font-size: 15px;}
+#txtC7 { font-size: 15px;}

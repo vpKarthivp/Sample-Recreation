@@ -1,0 +1,54 @@
+body {
+    background-color: lightblue;
+}
+
+@font-face {
+    font-family: DrukTextWide-Medium;
+    src: url(DrukTextWide-Super.ttf);
+}
+   
+#maincontainer {
+    width: 300px;
+    height: 600px;
+	left:0px;
+	top:0px;
+	position:absolute;
+	/*! box-sizing: border-box; */
+	/*! -webkit-box-sizing: border-box; */
+	/*! -moz-box-sizing: border-box; */
+	border: 1px solid #191a15;
+}
+#blue{opacity:1;
+	width: 300px;
+    height: 600px;
+	left:0px;
+	top:0px;
+	position:absolute;
+	background-color:#233923;
+clip: rect(600px,300px,600px,0px);
+}
+	
+	.texts{width: 300px;height: 26px;position: absolute;top: 325px;font-size: 20px;font-family: open sans;text-align: center;opacity: 1;color: white;font-weight: bold;line-height: 1;right: -300px;}
+	#text1{}
+	#text2{top: 366px;color: #1f8cb7;font-size: 30px;height: 30px;}
+	#text3{top: 418px;height: 70px;opacity: 1;}
+	#cta{width: 102px;height: 20px;background-color: #bd8383;border-radius: 10px;text-align: center;line-height: 1.1;position: absolute;bottom: -28px;right: 20px;border: 1px solid black;}
+	#cs{width: 300px;height: 32px;/*! background-color: #bd8383; *//*! border-radius: 10px; */text-align: center;line-height: 1.1;position: absolute;bottom: 52px;right: -300px;/*! border: 1px solid black; */font-size: 30px;color: #1f8cb7;font-weight: bold;}
+	#blue{}
+	.imgs{width: 100%;height: auto;position:absolute;top:0;left:0;opacity:1;}
+	#logo{position:absolute;height: 100%;width: auto;opacity: 0;}
+	#Plogo{width: 88px;height: auto;position:absolute;top:-132px;left:20px;}
+	#img1{}
+	#img2{}
+	#img3{}
+	
+	#imgpar {
+
+    bottom: 8px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+
+    left: 20px;
+}
+#whitimg{opacity:1;}

@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'FSEmeric2'; 
+    src: url('FSEmeric2.otf');     
+}                                   
+body,           
+body * {margin: 0; padding: 0;outline: 0; border: 0 none;vertical-align: baseline;     font-family: 'Lato', sans-serif;}
+#main-container { position: relative; opacity: 0;  overflow: hidden;  -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; width: 300px;height: 600px;border: 1px solid #EC008C;background-color: #ffffff;cursor: pointer;z-index: 0;display: none;   left: 0px;top: 0px;}
+#feature {  overflow: hidden; width: 300px;height: 600px;z-index: 1;top: -1px;left: -1px;} 
+/*common styles*/                            
+.mcommon {position: absolute;}                                                        
+.relcommon {position: relative;}                                   
+.seccommmon {display: inline-block;float: left; width: 100%;}          
+.transformcommon {transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);top: 50%;left: 50%;text-align: center;position: relative;}
+.margincommon {margin: 0 auto;  left: 0px; right: 0px; }   
+/*Element style*/ 
+#product-container{height: 564px;width: 284px;top: 0px;bottom: 0px;margin: auto;}
+.productparent{width: 100%;height: 141px;}
+#productparent1{top: 141px;opacity: 1;}
+#productparent2{top: 282px;display: -webkit-flex;display: flex;opacity: 1;}
+#productparent3{top: 423px;opacity: 1;}
+#productparent4{top: 141px;opacity: 1;}
+#productparent5{top: 282px;opacity: 1;display: -webkit-flex;display: flex;}
+#productparent6{top: 423px;opacity: 1;}
+.imgparent{left:0px;height: 100%;width: 142px;float: left;-webkit-order: 2;order: 2;overflow: hidden;}
+.productdetail{height: 100%;width: 142px;float: left;-webkit-order: 1;order: 1;}
+.productimg{max-width: 100%;max-height: 100%;}
+.copytxt{float: left;text-align: center;line-height: 1.1;display: inline-block;font-size: 14px;text-transform: uppercase;padding: 0px 20px;}
+.waspriceparent{width: 110px;height: 16px;top: 74px;}
+.waspricetxt{line-height: 1;font-size: 11.5px;white-space: pre;text-align: center;}
+.nowpriceparent{width: 120px;height: 28px;top: 98px;}
+.nowpricetxt{line-height: 1;font-size: 26px;text-align: center;}
+#ctaparent{height: 141px;width: 142px;top: 0px;right: 0px;}
+#ctaparent1{opacity: 1;}
+#ctaparent2{opacity: 1;}
+#logoimg{max-width: 100%;max-height: 100%;}
+#logoparent{height: 141px;width: 142px;top: 0px;left: 1px;}
+.ctaparent{width: 100%;height: 100%;}
+#ctatxt1{font-size: 38.5px;line-height: 1;font-weight: bold;}
+#ctatxt2{font-size: 19px;text-align: center;padding: 16.5px 17px; line-height:1.1;}
+.ctatxt{font-family:'FSEmeric2', Arial; float: left;display: inline-block;line-height: 1;}
+.waspricetxt sup{vertical-align: super;font-size: smaller;}
+.nowpricetxt sup{vertical-align: super;font-size: 15px;}
+.nowpricetxt sub{vertical-align: bottom;font-size: 11px;}
+.waspricetxt sub{vertical-align: bottom;font-size: smaller;}
+.copyparent{width: 130px;height: 46px;top: 17px;}
+.indicatorparent{width: 18px;height: 6px;top: 140px;right: 70px;}
+.indicator{width: 5px;height: 5px;border-radius: 50%;float: left;display: inline-block;}
+#indicator2{position:relative; left:6px;}
+.animImg123{left:0px;}
+.botmm{vertical-align: bottom !important;}
+.test{background-color:rgb(236, 0, 140) !important; opacity:0;left: 142px;
+    position: absolute;}
+	
+	#copyparentP5{left: 0px;}
+	#copyparentP6{}
+	#copyparentP4{}
+	#copyparentP3{z-index:1;}
+	#copyparentP2{left: 0px;z-index:1;}
+	#copyparentP1{z-index:1;}

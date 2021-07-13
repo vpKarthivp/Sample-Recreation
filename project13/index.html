@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="maincontainer">
+<img id="img1" class="image1 imgs" src="img1.png">
+
+<img id="text" class="texts imgsTxt" src="text.png">
+<img id="textT1" class="textT imgsTxt" src="text.png">
+<img id="textB1" class="textT imgsTxt" src="text.png">
+<img id="textT2" class="textT imgsTxt" src="text.png">
+<img id="textB2" class="textT imgsTxt" src="text.png">
+<img id="textT3" class="textT imgsTxt" src="text.png">
+<img id="textTR3" class="textTR textsR imgsTxt" src="text1.png">
+<img id="textB3" class="textT imgsTxt" src="text.png">
+<img id="textBR3" class="textTR textsR imgsTxt" src="text1.png">
+<img id="textT4" class="textT imgsTxt" src="text.png">
+<img id="textB4" class="textT imgsTxt" src="text.png">
+<img id="textT5" class="textT imgsTxt" src="text.png">
+<img id="textB5" class="textT imgsTxt" src="text.png">
+<img id="textT6" class="textT imgsTxt" src="text.png">
+<img id="textB6" class="textT imgsTxt" src="text.png">
+<img id="textT7" class="textT imgsTxt" src="text.png">
+<img id="textB7" class="textT imgsTxt" src="text.png">
+
+<div id="prantdiv">
+<img id="text21" class="text2anim text2 imgsTxt" src="text2.png">
+<img id="text21T" class="text2anim text2T imgsTxt" src="text12.png">
+<img id="text3" class="text2anim text2 imgsTxt" src="text2.png">
+<img id="text4" class="text2anim text2 imgsTxt" src="text2.png">
+<img id="text4T" class="text2anim text2T imgsTxt" src="text12.png">
+<img id="text5" class="text2anim text2 imgsTxt" src="text2.png">
+<img id="text6" class="text2anim text2 imgsTxt" src="text2.png">
+<img id="text7T" class="text2anim text2T imgsTxt" src="text12.png">
+<img id="text7" class="text2anim text2 imgsTxt" src="text2.png">
+<img id="text8" class="text2anim text2 imgsTxt" src="text2.png">
+
+</div>
+<img id="BG" class="BG imgs" src="BG.png">
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+ <script>
+var tl = new TimelineMax({});
+tl.to("#text", 0.5, {opacity: 1});
+tl.staggerTo(".textT", 1, { opacity: 1,onComplete:tl2}, 0.1);
+tl.to("#text", 0.1, {opacity: 0});
+function tl1(){
+var tl1 = new TimelineMax({});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:10,y:10});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:-10,y:-10});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl1.to("#textB3", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl1.to("#textB3", 0, {opacity:0});
+tl1.to("#textBR3", 0, {opacity:1});
+}
+
+function tl2(){
+var tl2 = new TimelineMax({onStart:tl1});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:10,y:10});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:-10,y:-10});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl2.to("#textT3", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl2.to("#textT3", 0, {opacity:0});
+tl2.to("#textTR3", 0, {opacity:1});
+}
+
+function tl3(){
+var tl3 = new TimelineMax({});
+tl3.to("#textT7", 0.1, {opacity:0});
+tl3.to("#textB7", 0.1, {opacity:0});
+tl3.to("#textBR3", 0.1, {opacity:0});
+tl3.to("#textTR3", 0.1, {opacity:0});
+tl3.to("#textT5", 0.1, {opacity:0});
+tl3.to("#textB5", 0.1, {opacity:0});
+tl3.to("#textT4", 0.1, {opacity:0});
+tl3.to("#textB4", 0.1, {opacity:0});
+tl3.to("#textT6", 0.1, {opacity:0});
+tl3.to("#textB6", 0.1, {opacity:0});
+tl3.to("#textB1", 0.1, {opacity:0});
+tl3.to("#textT1", 0.1, {opacity:0});
+tl3.to("#textT2", 0.1, {opacity:0});
+tl3.to("#textB2", 0.1, {opacity:0});
+}
+function tl4(){
+var tl4 = new TimelineMax({});
+tl4.to("#text21", 0.2, {opacity:1});
+tl4.staggerTo(".text2", 1, {onStart:tl5, opacity: 1}, 0.1);
+tl4.to("#text21", 0, {opacity:0});
+tl4.to("#text21T", 0, {opacity:1});
+}
+
+function tl5(){
+var tl5 = new TimelineMax({});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:10,y:10});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:-10,y:-10});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl5.to("#text4", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl5.to("#text4", 0, {opacity:0});
+tl5.to("#text4T", 0, {opacity:1});
+}
+function tl6(){
+var tl6 = new TimelineMax({onComplete:lastframe});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:10,y:10});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:-5,y:-5});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:-10,y:-10});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:5,y:5});
+tl6.to("#text7", 0.1, {ease: SteppedEase.config(40),x:0,y:0});
+
+tl6.to("#text7", 0, {opacity:0});
+tl6.to("#text7T", 0, {opacity:1});
+
+}
+
+function lastframe(){
+
+var lastframe = new TimelineMax({delay:1});
+lastframe.to("#prantdiv", 1, {y:-180,opacity:1});
+lastframe.to("#BG", 1, {opacity:1});}
+
+</script> 
+
+<!-- <script>
+var tl = new TimelineMax({repeat:-1,repeatDelay:0.1});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1,ease: Power0.easeNone});
+tl.to("#img3", 0.2, { opacity: 1,ease: Power0.easeNone});
+tl.to(".childs", 0.5, { scale:1,opacity: 1,ease: Power0.easeNone});
+tl.to(".image3", 0.5, {rotationY:-60,x:-300,scale:0.5,opacity: 1,ease: Power0.easeNone},"+=1");
+tl.to(".image2", 0.5, {rotationY:60,x:300,scale:0.5,opacity: 1,ease: Power0.easeNone},"+=1");
+tl.to(".image1", 0.5, {y:-600,scale:0.5,opacity: 1,ease: Power0.easeNone},"+=1");
+
+</script>  -->
+
+<!--  <script>
+var tl = new TimelineMax({repeat:-1,repeatDelay:0.1});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1});
+tl.to("#img3", 0.2, { opacity: 1});
+tl.to(".childs", 0.5, { scale:1,opacity: 1});
+tl.to(".image3", 0.5, {rotationY:-60,x:-300,scale:0.5,opacity: 1,ease: Elastic.easeInOut.config(1, 0.3)},"+=1");
+tl.to(".image2", 0.5, {rotationY:60,x:300,scale:0.5,opacity: 1,ease: Elastic.easeInOut.config(1, 0.3)},"+=1");
+tl.to(".image1", 0.5, {y:-600,scale:0.5,opacity: 1,ease: Elastic.easeInOut.config(1, 0.3)},"+=1");
+
+</script>  -->
+
+<!-- <script>
+var tl = new TimelineMax({repeat:2,yoyo:true});
+tl.to("#img1child", 0, { clip: "rect(0px, 0px, 600px, 0px",opacity: 0});
+tl.to("#img2child", 0, { clip:"rect(0px, 300px, 600px, 0px)",y:600,scale:0.5,opacity: 0});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1});
+tl.to("#img3", 0.2, { clip:"rect(0px, 300px, 600px, 0px)",opacity: 1});
+tl.to("#img3child", 0.5, { scale:1,opacity: 1});
+tl.to("#img3", 0.5, {clip:"rect(359px,266px,413px,33px)",opacity: 1},"+=1");
+tl.to("#img3", 0.5, {clip:"rect(359px,266px,413px,266px)",opacity: 1},"+=1");
+tl.to("#img3child", 0.5, { y:-600,scale:1,opacity: 1});
+tl.to("#img2child", 0.5, { y:0,scale:1,opacity: 1});
+tl.to("#img2child", 1, { clip: "rect(0px, 0px, 600px, 0px"},"+=1");
+tl.to("#img1child", 0.5, {clip: "rect(0px, 300px, 600px, 0px",opacity: 1});
+
+</script> -->
+
+</html>

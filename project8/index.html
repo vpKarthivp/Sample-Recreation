@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="mainContainer" class="mainContainer">
+    <img id="IMG1" class="imgs" src="IMG1.png" onload="FstText()">
+	<img id="IMG2" class="imgs" src="IMG2.png">
+	<img id="IMG3" class="imgs" src="IMG3.png">
+	<img id="IMG4" class="imgs" src="IMG4.png">
+	<img id="IMG5" class="imgs" src="IMG5.png">
+	<img id="IMG6" class="imgs" src="IMG6.png">
+	<img id="IMG7" class="imgs" src="IMG7.png">
+	<img id="ctaw" class="ctas imgs" src="CTAw.png">
+	<img id="ctab" class="ctas imgs" src="CTAb.png">
+	<img id="bg" class="bg imgs" src="bg.png">		
+	<img id="man1" class="man imgs" src="head.png">
+	<img id="man2" class="man imgs" src="bdy.png">
+	<img id="mouth" class="mouth imgs" src="muth.png">
+	<img id="mouth1" class="mouth imgs" src="muth.png">
+	<div id="textsplit1" class="textsplit" >HELO EVERYONE!</div>	
+   <div id="textsplit2" class="textsplit"> Dynamic creative is a term commonly used in digital marketing,  and is   simply another wayof saying "personalized content." Dynamic ads are  built in real time when  an ad request is sent to the server, and    will pull different   creative elements basedon the environment, the user and other factors.</div>	
+   <img id="BannerFlow" class="BannerFlow imgs" src="BannerFlow.png">
+   <div id="steps1" class="steps textsplit" >STEP1</div>
+   <div id="steps2" class="steps textsplit" >STEP2</div>
+   <div id="steps3" class="steps textsplit" >STEP3</div>
+   <P style="opacity:0;color:white;margin-bottom: 82px;">:</P>
+   <P style="top: 382px;">:</P>
+   <P style="top: 482px;">:</P>
+   <div id="RIGHT1" class="RIGHTS textsplit" >FEEDS</div>
+   <div id="RIGHT2" class="RIGHTS textsplit" >DESIGN</div>
+   <div id="RIGHT3" class="RIGHTS textsplit" >INTEGRATION</div>
+</div>
+</body>
+<script>
+
+var textNewArray;
+
+function txtSplit(x){
+
+var textsplit = document.getElementById(x).innerHTML;
+
+textNewArray = textsplit.split("");
+console.log(textNewArray);
+var splitPushNewText = "";
+for(i=0;i<textNewArray.length;i++){
+splitPushNewText += '<div id="test'+i+'" class="spans" >'+textNewArray[i]+'</div>';
+}
+document.getElementById(x).innerHTML=splitPushNewText;
+
+}
+
+ function FstText() { 
+ txtSplit('textsplit1');
+ txtSplit('textsplit2');
+ }
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+
+var tl = new TimelineMax();
+
+tl.to("#IMG1", 0.1, {opacity:1})
+tl.to("#IMG2", 0.1, {opacity:1})
+tl.to("#IMG3", 0.1, {opacity:1})
+tl.to("#IMG4", 0.1, {opacity:1})
+tl.to("#IMG5", 0.1, {opacity:1})
+tl.to("#IMG6", 0.1, {opacity:1})
+tl.to("#IMG7", 0.1, {opacity:1})
+tl.to("#ctaw", 1, {filter:"blur(0px)",opacity:1,clip: "rect(0px,300px,100px,0px)"})
+tl.to("#ctab", 1, {filter:"blur(0px)",opacity:1,clip: "rect(0px,300px,100px,0px)"},"-=1")
+
+tl.to("#ctaw", 1, {filter:"blur(0px)",opacity:1,y:250,ease: Back.easeInOut.config(1.7)})
+tl.to("#ctab", 1, {filter:"blur(0px)",opacity:1,y:-250,ease: Back.easeInOut.config(1.7)},"-=1")
+
+tl.to("#ctaw", 1, {opacity:1,clip: "rect(0px,300px,50px,0px)"})
+tl.to("#ctab", 1, {opacity:1,clip: "rect(50px,300px,100px,0px)"},"-=1")
+
+tl.to("#ctaw", 1.5, {opacity:1,x:-300,ease: Back.easeInOut.config(1.7)})
+tl.to("#ctab", 1.5, {opacity:1,x:300,ease: Back.easeInOut.config(1.7)},"-=1.5")
+
+tl.to(".man", 0.3, {opacity:1,onStart:t2})
+
+
+function t2(){
+var t2 = new TimelineMax({onStart:t3});
+//t2.staggerTo(".spans", 2, {opacity:1,y:100,scale:1.4,ease: Back.easeInOut.config(1.7),filter: "blur(0px)"},0.2)
+t2.staggerTo(".spans", 0.05, {opacity:1,X:100,scale:1.6,filter: "blur(0px)"},0.05)
+t2.staggerTo("#textsplit2", 0.5, {width:"60%","white-space": "pre-wrap"})
+t2.staggerTo("#textsplit2", 1, {width:"780%"})
+t2.staggerTo("#textsplit2", 1.5, {ease: Back.easeInOut.config(1.7),x:2300})
+t2.to("#textsplit1", 1.5, {ease: Back.easeInOut.config(1.7),x:-300},"-=1.5")
+
+t2.to("#BannerFlow", 1, {opacity:1,ease: Back.easeInOut.config(1.7),y:600},"-=1")
+t2.staggerTo(".steps", 0.5, {opacity:1,ease: Back.easeInOut.config(1.7),scale:1.6,x:300},0.2)
+t2.staggerTo(".steps", 0.3, {opacity:1,ease: Back.easeInOut.config(1.7),scale:1.6,x:200},0.2)
+t2.staggerTo(".RIGHTS", 0.3, {opacity:1,ease: Back.easeInOut.config(1.7),scale:1.6,x:210},0.2)
+t2.staggerTo("P", 0.5, {opacity:1,scale:1.6},0.2)
+
+}
+
+
+function t3(){
+var t3 = new TimelineMax({yoyo:true,repeat:15});
+t3.to("#mouth1", 0, {opacity:1})
+t3.to(".mouth", 0.2, {opacity:1,scaleX:0.5,scaleY:0.2})
+t3.to(".mouth", 0.2, {scaleX:0.5,scaleY:0.4})
+t3.to(".mouth", 0.2, {scaleX:0.5,scaleY:0.2})
+t3.to(".mouth", 0.2, {scaleX:0.5,scaleY:0.4})
+t3.to(".mouth", 0.2, {scaleX:0.5,scaleY:0.2})
+}
+
+</script>
+
+
+
+</html>

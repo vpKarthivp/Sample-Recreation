@@ -1,0 +1,47 @@
+body{margin: 0; padding: 0;}
+#mainContainer{width:300px;height:600px;position:absolute;top:0px;left:0px;overflow: hidden;}
+#bg{ clip: rect(0px, 300px, 600px, 0px);}
+.imgs{width: 100%;height: auto;position: absolute;opacity:0;filter: blur(6px);}
+#ctaw{clip: rect(0px,300px,100px,300px);}
+#ctab{clip: rect(0px,0px,100px,0px);bottom: 0;}
+.man{bottom: 0;}
+#man1{bottom: 145px;}
+#bg{}
+.mouth{opacity:0;bottom: 268px;width: 20px;height: 21px;left: 133px;transform: scale(0.5,0.2);}
+#mouth1{opacity:0;}
+#BannerFlow{opacity:0;top:-600px;filter: blur(0px);}
+.textsplit{
+    
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+    text-align: center;
+}
+#textsplit1{top: 50px;}
+#textsplit2{    top: 80px;
+    width: 87%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;}
+
+.spans{    opacity: 0;
+    text-align: center;
+    /* left: 0; right: 0; margin: auto 0; */
+    position: relative;
+    display: inline-block;
+	font-size: 15px;
+    color: white;
+	letter-spacing: 5px;
+    white-space: pre-wrap;
+	filter: blur(20px);
+	line-height:2;}
+	.steps{text-align: center;left:-600px;top:300px;opacity:0;font-size: 15px;color: white;}
+	#steps2{top:400px;}
+	#steps3{top:500px;}
+	
+	.RIGHTS{text-align: left;right:0px;top:300px;opacity:0;font-size: 15px;color: white;}
+	#RIGHT2{top:400px;}
+	#RIGHT3{top:500px;}
+	p{opacity: 0;  color: white; margin-bottom: 82px; left: 90px; top: 282px; position: absolute;}

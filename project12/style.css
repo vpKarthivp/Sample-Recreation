@@ -1,0 +1,6 @@
+body { background-color: lightblue;margin:0;padding:0;}
+#maincontainer{width:300px;height:600px;left:0px;top:0px;position:absolute;opacity:0;border: 1px solid black;box-sizing: border-box;overflow: hidden;}
+.imgs{position:absolute;width:300px;height:600px;top:-1px;left:-1px;}
+#img2{opacity:0;}
+#img3{opacity:0;}
+.childs{opacity:0;}

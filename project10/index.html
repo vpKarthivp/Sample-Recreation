@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="mainContainer" class="mainContainer">
+    <img id="bg" class="imgs" src="bg2.png">
+	<img id="bg1" class="imgs" src="bg1.png">
+	<img id="txtimg1" class="imgs" src="txtimg1.png">
+	<img id="txtimg2" class="imgs" src="txtimg2.png">
+	<img id="txtimg3" class="imgs" src="txtimg3.png">
+	<img id="cta" class="imgs" src="cta.png">
+	<div id="planepaText" class="planepaText">
+	  <div id="planepaText1" class="planepaTexts">TEXT1 TEXT1 TEXT1TEXT1 TEXT1TEXT1 TEXT1TEXT1TEXT1TEXT1.</div>	</div>
+	<div id="planepa" class="planepa">
+	<div id="plane" class='plane'><img id="planeC" class="planeC" src="planeC.png"></div>
+	<div id="prob1" class='probs'><img id="probC1" class="probC" src="test.png"></div>
+	<div id="prob2" class='probs'><img id="probC2" class="probC" src="test.png"></div>
+	</div>
+
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+
+var tl = new TimelineMax();
+
+tl.to("#bg", 1, {scale:1,opacity:1,onStart:splitext,onComplete:probal})
+tl.to("#planepa", 2.5, {rotation:-20,scale:0.5,y:75,opacity:1,ease: Power0.easeNone,onStart:textt})
+
+tl.to("#planepa", 2, {rotation:10,scale:0.8,y:150,opacity:1,ease: Power0.easeNone})
+
+tl.to("#planepa", 2, {rotation:-20,scale:1.1,y:200,opacity:1,ease: Power0.easeNone})
+
+tl.to("#txtimg1", 1, {scale:1,opacity:1,clip: "rect(0px, 300px, 600px, 0px)"},"-=5")
+tl.to("#txtimg1", 1, {scale:1,opacity:0,clip: "rect(0px, 0px, 600px, 0px)"})
+tl.to("#txtimg2", 1, {scale:1,opacity:1,clip: "rect(0px, 300px, 600px, 0px)"})
+tl.to("#txtimg2", 1, {scale:1,opacity:0,clip: "rect(0px, 0px, 600px, 0px)"},"+=2")
+tl.to("#txtimg3", 1, {scale:1,opacity:1,clip: "rect(0px, 300px, 600px, 0px)"})
+tl.to("#txtimg3", 1, {scale:1,opacity:0,clip: "rect(0px, 0px, 600px, 0px)"},"+=2")
+tl.to("#txtimg1", 1, {scale:1,opacity:1,clip: "rect(0px, 300px, 600px, 0px)"})
+tl.to("#bg", 1, {scale:1,opacity:0})
+tl.to("#bg1", 1, {scale:1,opacity:1},"-=0.5")
+tl.to("#cta", 1, {scale:1,opacity:1,ease:Linear.easeNone,clip:"rect(0px, 300px, 600px, 0px)"});
+
+function probal(){
+var t3 = new TimelineMax({repeat:15});
+t3.to(".probC", 0.5, {rotation:4020,ease:Linear.easeNone})
+}
+
+function textt(){
+var textt = new TimelineMax();
+textt.staggerTo("span", 2, {ease: Back.easeInOut.config(1.7),y:50,opacity:1},1)
+}
+
+function t2(){
+var t2 = new TimelineMax({yoyo:true,repeat: 16});
+t2.to("#mouth", 0.1, {scaleX:1,scaleY:0.4,rotation: 0})
+t2.to("#mouth", 0.2, {scaleX:1,scaleY:1,rotation: 10},"+=0.1")
+t2.to("#mouth", 0.2, {scaleX:1,scaleY:0.6,rotation: 6})
+t2.to("#mouth", 0.2, {scaleX:1,scaleY:0.8,rotation: -5})
+t2.to("#mouth", 0.2, {scaleX:0.98,scaleY:0.3,rotation: 0})
+}
+
+
+var textssPlt = [];
+function splitext(){
+var textss = document.getElementById("planepaText1").innerHTML;
+textssPlt=textss.split(" ");
+var ts="";
+for(i=0;i<textssPlt.length;i++){
+
+ts += "<span>"+textssPlt[i]+"</span>";
+
+}
+
+document.getElementById("planepaText1").innerHTML=ts;
+
+}
+
+
+</script>
+
+
+
+</html>

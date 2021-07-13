@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="maincontainer">
+<img id="img1" class="image1 imgs" src="img1.png">
+<img id="img1child" class="childs image1 imgs" src="img1child.png">
+<img id="img2" class="childs image2 imgs" src="img2.png">
+<img id="img2child" class="childs image2 imgs" src="img2child.png">
+<img id="img3" class="image3 imgs" src="img3.png">
+<img id="img3child" class="childs image3 imgs" src="img3child.png">
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--  <script>
+var tl = new TimelineMax({repeat:-1,repeatDelay:0.5});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1,ease: Power0.easeNone});
+tl.to("#img2", 0.2, { opacity: 1,ease: Power0.easeNone});
+tl.to("#img3", 0.2, { opacity: 1,ease: Power0.easeNone});
+tl.to(".childs", 0.5, { scale:1,opacity: 1,ease: Power0.easeNone});
+tl.to(".image3", 0.5, {x:-300,opacity: 1,ease: Power0.easeNone},"+=1");
+tl.to(".image2", 0.5, {x:300,opacity: 1,ease: Power0.easeNone},"+=1");
+
+</script>  -->
+
+<!-- <script>
+var tl = new TimelineMax({repeat:-1,repeatDelay:0.1});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1,ease: Power0.easeNone});
+tl.to("#img3", 0.2, { opacity: 1,ease: Power0.easeNone});
+tl.to(".childs", 0.5, { scale:1,opacity: 1,ease: Power0.easeNone});
+tl.to(".image3", 0.5, {rotationY:-60,x:-300,scale:0.5,opacity: 1,ease: Power0.easeNone},"+=1");
+tl.to(".image2", 0.5, {rotationY:60,x:300,scale:0.5,opacity: 1,ease: Power0.easeNone},"+=1");
+tl.to(".image1", 0.5, {y:-600,scale:0.5,opacity: 1,ease: Power0.easeNone},"+=1");
+
+</script>  -->
+
+<!--  <script>
+var tl = new TimelineMax({repeat:-1,repeatDelay:0.1});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1});
+tl.to("#img3", 0.2, { opacity: 1});
+tl.to(".childs", 0.5, { scale:1,opacity: 1});
+tl.to(".image3", 0.5, {rotationY:-60,x:-300,scale:0.5,opacity: 1,ease: Elastic.easeInOut.config(1, 0.3)},"+=1");
+tl.to(".image2", 0.5, {rotationY:60,x:300,scale:0.5,opacity: 1,ease: Elastic.easeInOut.config(1, 0.3)},"+=1");
+tl.to(".image1", 0.5, {y:-600,scale:0.5,opacity: 1,ease: Elastic.easeInOut.config(1, 0.3)},"+=1");
+
+</script>  -->
+
+<script>
+var tl = new TimelineMax({repeat:2,yoyo:true});
+tl.to("#img1child", 0, { clip: "rect(0px, 0px, 600px, 0px",opacity: 0});
+tl.to("#img2child", 0, { clip:"rect(0px, 300px, 600px, 0px)",y:600,scale:0.5,opacity: 0});
+tl.to("#img3child", 0, { scale:0.5,opacity: 0});
+tl.to("#maincontainer", 0.5, { opacity: 1});
+tl.to("#img3", 0.2, { clip:"rect(0px, 300px, 600px, 0px)",opacity: 1});
+tl.to("#img3child", 0.5, { scale:1,opacity: 1});
+tl.to("#img3", 0.5, {clip:"rect(359px,266px,413px,33px)",opacity: 1},"+=1");
+tl.to("#img3", 0.5, {clip:"rect(359px,266px,413px,266px)",opacity: 1},"+=1");
+tl.to("#img3child", 0.5, { y:-600,scale:1,opacity: 1});
+tl.to("#img2child", 0.5, { y:0,scale:1,opacity: 1});
+tl.to("#img2child", 1, { clip: "rect(0px, 0px, 600px, 0px"},"+=1");
+tl.to("#img1child", 0.5, {clip: "rect(0px, 300px, 600px, 0px",opacity: 1});
+
+</script>
+
+</html>

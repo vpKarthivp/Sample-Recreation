@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Raleway" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">  
+
+</head>
+<body>
+
+<div id="Maincontainer">
+<img class="imgs" id="bg" src="bg.png">
+<img class="changeclass1 imgs" id="img1" src="img1.png">
+<img class="changeclass2 imgs" id="img2" src="img2.png">
+<img class="changeclass2 imgs" id="img3" src="img3.png">
+<img class="livanim LINE imgs" id="LINE" src="LINE.png">
+<img class="changeclass1 livanim imgs" id="liv" src="liv.png">
+<img class="changeclass2 imgs" id="bed" src="bed.png">
+<img class="changeclass3 imgs" id="kit" src="kit.png">
+<img class="imgs" id="logo" src="logo.png">
+<img class="imgs" id="creative" src="creative.png">
+<img class="imgs" id="expert" src="expert.png">
+<img class="imgs" id="inter" src="inter.png">
+<img class="imgs" id="ready" src="ready.png">
+<img class="imgs" id="CTA" src="CTA.png">
+<img class="imgs" id="url" src="url.png">
+<div id="linDiv" class="linDiv"></div>
+
+
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+var tl = new TimelineMax();
+tl.to("#bg", 0, {y:-130});
+tl.to("#img1", 0, {y:-130});
+tl.to("#logo", 0, {y:-80});
+tl.to("#creative", 0, {x:-190});
+tl.to("#CTA", 0, {x:-240});
+tl.to("#url", 0, {x:240});
+tl.to("#expert", 0, {x:140});
+tl.to("#inter", 0, {x:-160});
+tl.to(".livanim", 0, {x:94,y:-40});
+tl.to("#linDiv", 0, {width:"55px",opacity:0});
+tl.to("#Maincontainer", 0.2, { opacity: 1});
+tl.to("#bg", 1, {opacity:1,y:0});
+tl.to("#img1", 1, {opacity:1,y:0},"-=0.5");
+tl.to("#creative", 1, {opacity:1,x:0,ease: Elastic. easeOut.config( 1, 0.75)},"-=0.5");
+tl.to("#inter", 0.5, {opacity:1,x:0,ease: Elastic. easeOut.config( 1, 1)},"-=0.5");
+tl.to("#expert", 0.5, {opacity:1,x:0,ease: Elastic. easeOut.config( 1, 1)},"-=0.5");
+tl.to("#linDiv", 0.3, {width:"220px",opacity:1},"-=0.3");
+tl.to("#linDiv", 0.3, {width:"55px",opacity:1},"-=0.1");
+tl.to("#logo", 1, {y:0,opacity:1});
+tl.to(".livanim", 1, {x:0,y:0,opacity:1},"-=0.5");
+tl.to("#ready", 1, {opacity:1});
+tl.to("#CTA", 0.5, {x:0,opacity:1},"-=0.5");
+tl.to("#url", 0.5, {x:0,opacity:1},"-=0.5");
+tl.to(".changeclass1", 0.5, {opacity:1});
+</script>
+</html>

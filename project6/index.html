@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="maincontainer" class="animbg">
+<img class="animbg imgs" id="BG" src="BG.jpg">
+<img class="imgs" id="shape" src="shape.png">
+<img class="imgs" id="logo" src="logo.png">
+<img class="imgs" id="mostEff" src="mostEff.png">
+<img class="imgs" id="pest" src="pest.png">
+<img class="imgs" id="EDSOP" src="EDSOP.png">
+<img class="imgs" id="control" src="control.png">
+<img class="imgs" id="CTA" src="CTA.png">
+<img class="imgs" id="url" src="url.png">
+<img class="animaclass2 imgs" id="rat" src="rat.png">
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+
+function tl(){
+var tl = new TimelineMax({repeat:2,repeatDelay:0.5});
+tl.to("#maincontainer", 0, { opacity:0}, 0);
+tl.to("#rat", 0, { x:-284});
+tl.to("#mostEff", 0, { y:15});
+tl.to("#EDSOP", 0, { y:-20});
+tl.to("#CTA", 0, { scale:0.8,y:50,"transform-origin": "center center"});
+tl.to("#logo", 0, { y:-70});
+tl.to("#url", 0, { y:30});
+tl.to("#pest", 0, { scale:0.7,y:-55,"transform-origin": "center center"});
+tl.to("#control", 0, { scale:0.7,y:-35,"transform-origin": "center center"});
+tl.to("#shape", 0, { transform: "translate3d(0px, -156px, 0) scale3d(1, .53, 1)"}, 0);
+tl.to(".animaclass2", 0, { opacity:1}, 0);
+tl.to(".animbg", 0.5, { opacity: 1}, 0);
+tl.to("#rat", 0.5, { x:0}, 0.5);
+tl.to("#shape", 0.5, { opacity:0.7,transform: "translate3d(0px, 0px, 0) scale3d(1, 1, 1)"}, "-=0.5");
+tl.to("#pest", 0.5, { opacity:1,scale:1,y:0,"transform-origin": "center center"});
+tl.to("#control", 0.5, { opacity:1,scale:1,y:0,"transform-origin": "center center"},"-=0.2");
+tl.to("#mostEff", 0.5, { opacity:1,y:0});
+tl.to("#EDSOP", 0.5, { opacity:1,y:0},"-=0.2");
+tl.to("#CTA", 0.5, { opacity:1,scale:1,y:0,"transform-origin": "center center"});
+tl.to("#logo", 0.5, { opacity:1,y:0});
+tl.to("#url", 0.5, { opacity:1,y:0},"-=0.5");}
+
+window.addEventListener('load', tl); 
+</script>
+
+
+</html>
